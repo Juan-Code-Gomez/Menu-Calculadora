@@ -2,14 +2,15 @@ let op = document.getElementById("op");
 
 const operaciones = () => {
   let op = prompt(
-    "Escribe: \n 1 - Suma \n 2 - Resta \n 3 - Multiplicacion \n 4 - Division"
+    "Escribe: \n 1 - Suma \n 2 - Resta \n 3 - Multiplicacion \n 4 - Division \n 5 -Salir"
   );
-  while (op !== "1" && op !== "2" && op !== "3" && op !== "4") {
+  while (op !== "1" && op !== "2" && op !== "3" && op !== "4" && op !== "5") {
     alert("Favor ingresar una opcion valida de 1 a 4");
     op = prompt(
-      "Escribe: \n 1 - Suma \n 2 - Resta \n 3 - Multiplicacion \n 4 - Division"
+      "Escribe: \n 1 - Suma \n 2 - Resta \n 3 - Multiplicacion \n 4 - Division \n 5 -Salir"
     );
   }
+  if(op == 1 || op == 2 || op ==3 || op ==4){
   let num1 = parseFloat(prompt("Ingrese el numero 1"));
   let num2 = parseFloat(prompt("Ingrese el numero 2"));
   let resultado = 0; //null - undefine - NaN
@@ -29,8 +30,14 @@ const operaciones = () => {
       resultado = num1 / num2;
     }
   }
-
   alert("El resultado es: " + resultado);
+}
+
+  if(op == 5){
+    alert("Adios");
+  }
+
+
 };
 
 op.onclick = function () {
